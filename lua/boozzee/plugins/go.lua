@@ -19,15 +19,6 @@ return {
 			verbose = false,
 		})
 
-		local format_grp = vim.api.nvim_create_augroup("GoFormat", {})
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = "*.go",
-			callback = function()
-				require("go.format").goimports()
-			end,
-			group = format_grp,
-		})
-
 		local map = vim.keymap.set
 		map("n", "<leader>Gt", ":GoTest<CR>", { desc = "Go test" })
 		map("n", "<leader>Gf", ":GoTestFunc<CR>", { desc = "Go test func" })
