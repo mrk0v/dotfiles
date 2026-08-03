@@ -3,12 +3,10 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		event = { "BufReadPre", "BufNewFile" },
-		config = function()
-			require("ibl").setup({
-				indent = { char = "│" },
-				scope = { enabled = true, show_start = false, show_end = false },
-			})
-		end,
+		opts = {
+			indent = { char = "│" },
+			scope = { enabled = true, show_start = false, show_end = false },
+		},
 	},
 	{
 		"folke/todo-comments.nvim",
@@ -28,5 +26,19 @@ return {
 		"kevinhwang91/nvim-bqf",
 		ft = "qf",
 		config = true,
+	},
+	-- Схемы для JSON/YAML LSP
+	{
+		"b0o/schemastore.nvim",
+		lazy = true,
+	},
+	-- git
+	{
+		"kdheepak/lazygit.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		cmd = "LazyGit",
+		keys = {
+			{ "<leader>gg", ":LazyGit<CR>", desc = "LazyGit" },
+		},
 	},
 }

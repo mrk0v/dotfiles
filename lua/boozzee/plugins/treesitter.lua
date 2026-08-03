@@ -3,21 +3,29 @@ return {
 	build = ":TSUpdate",
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
-		local status, configs = pcall(require, "nvim-treesitter.configs")
-		if not status then
-			return
-		end
-
-		configs.setup({
+		require("nvim-treesitter").setup({
 			ensure_installed = {
-				"go", "gomod", "gowork", "gosum",
-				"lua", "json", "yaml", "toml",
-				"dockerfile", "sql", "bash",
-				"markdown", "markdown_inline",
-				"proto", "make",
-				"vim", "vimdoc", "query", 
+				"go",
+				"gomod",
+				"gowork",
+				"gosum",
+				"lua",
+				"json",
+				"yaml",
+				"toml",
+				"dockerfile",
+				"sql",
+				"bash",
+				"markdown",
+				"markdown_inline",
+				"proto",
+				"make",
+				"vim",
+				"vimdoc",
+				"query",
 			},
-			highlight = { 
+			auto_install = true,
+			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
 			},
@@ -34,4 +42,3 @@ return {
 		})
 	end,
 }
-

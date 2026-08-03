@@ -13,6 +13,7 @@ return {
 
 		telescope.setup({
 			defaults = {
+				preview = { treesitter = false },
 				prompt_prefix = "  ",
 				selection_caret = " ",
 				path_display = { "truncate" },
