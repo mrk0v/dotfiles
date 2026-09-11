@@ -14,14 +14,12 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require("boozzee.core.options")
-require("boozzee.core.keymaps")
 require("lazy").setup({
 	{ import = "boozzee.plugins" },
+	{ "blazkowolf/gruber-darker.nvim" },
 }, {
 	checker = { enabled = false },
 	change_detection = { notify = false },
-	install = { colorscheme = { "tokyonight", "habamax" } },
 	performance = {
 		rtp = {
 			disabled_plugins = {
@@ -37,5 +35,6 @@ require("lazy").setup({
 		},
 	},
 })
-
+require("boozzee.core.options")
+require("boozzee.core.keymaps")
 require("boozzee.core.colorscheme")

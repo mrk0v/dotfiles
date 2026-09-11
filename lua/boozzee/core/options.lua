@@ -26,7 +26,7 @@ opt.background = "dark"
 opt.pumheight = 12
 opt.showmode = false
 opt.laststatus = 3
-opt.colorcolumn = "120"   -- визуальная граница длины строки
+opt.colorcolumn = "100" -- визуальная граница длины строки
 
 -- Scrolling
 opt.scrolloff = 8
