@@ -14,7 +14,12 @@ return {
 				},
 			},
 			filters = { dotfiles = false, custom = { ".git", "node_modules", ".cache" } },
-			actions = { open_file = { quit_on_open = false } },
+			actions = {
+				open_file = {
+					quit_on_open = false,
+					resize_window = true,
+				},
+			},
 			git = { enable = true, ignore = false },
 			update_focused_file = { enable = true },
 		})

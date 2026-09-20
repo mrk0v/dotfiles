@@ -10,3 +10,10 @@ require("gruber-darker").setup({
 })
 
 vim.cmd.colorscheme("gruber-darker")
+
+-- Softer green
+local soft_green = "#8faa4b"
+
+vim.api.nvim_set_hl(0, "String", { fg = soft_green })
+vim.api.nvim_set_hl(0, "SpecialString", { fg = soft_green })
+vim.api.nvim_set_hl(0, "Character", { fg = soft_green })

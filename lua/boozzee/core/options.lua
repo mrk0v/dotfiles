@@ -46,8 +46,9 @@ opt.backup = false
 opt.updatetime = 200
 opt.timeoutlen = 300
 opt.completeopt = { "menuone", "noselect" }
-opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+if vim.bo.modifiable then
+	opt.fileencoding = "utf-8"
+end
 opt.isfname:append("@-@") -- корректная работа с путями типа @scope/pkg
 
 -- Отключаем встроенный файловый менеджер (используем nvim-tree)
