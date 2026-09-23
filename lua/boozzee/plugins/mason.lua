@@ -7,8 +7,8 @@ return {
 				ui = {
 					border = "rounded",
 					icons = {
-						package_installed   = "✓",
-						package_pending     = "➜",
+						package_installed = "✓",
+						package_pending = "➜",
 						package_uninstalled = "✗",
 					},
 				},
@@ -26,6 +26,7 @@ return {
 					"lua-language-server",
 					"json-lsp",
 					"yaml-language-server",
+					"clangd",
 
 					-- Formatters
 					"stylua",
@@ -33,6 +34,7 @@ return {
 					"goimports",
 					"yamlfmt",
 					"jq",
+					"clang-format",
 
 					-- Linters
 					"golangci-lint",
